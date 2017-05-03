@@ -1,0 +1,58 @@
+package com.cqut.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.cqut.bean.User;
+import com.cqut.dao.UserMapper;
+import com.cqut.service.IUserService;
+
+/**
+ *  UserService的实现类
+ * @author hshuai
+ *
+ */
+@Service("userService")
+public class UserServiceImpl implements IUserService{
+	//Resource注解
+	@Resource
+	UserMapper userMapper;
+
+	/**
+	 * 登陆
+	 */
+	@Override
+	public User login(User user) {
+		// TODO Auto-generated method stub
+		User useResult =  userMapper.login(user);
+		return useResult;
+	}
+
+	/**
+	 * 注册
+	 */
+	@Override
+	public boolean register(User user) {
+		// TODO Auto-generated method stub
+		int result =  userMapper.insertSelective(user);
+		if(result == 1)
+			return true;
+		return false;
+	}
+	
+	/**
+	 * 获取用户列表
+	 */
+	
+	@Override
+	public List<User> getUsers() {
+		// TODO Auto-generated method stub
+		List<User> userList =  userMapper.getUsers();
+		
+		return userList;
+	}
+
+}

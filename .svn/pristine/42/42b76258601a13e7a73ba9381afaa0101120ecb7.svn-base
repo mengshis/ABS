@@ -1,0 +1,81 @@
+package com.cqut.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.cqut.bean.Flight;
+import com.cqut.dao.FlightMapper;
+import com.cqut.service.IFlightService;
+
+@Service("flightService")
+public class FlightServiceImpl implements IFlightService{
+	
+	//Resource注解
+	@Resource
+	FlightMapper flightMapper;
+
+	/**
+	 * 添加航班方法
+	 */
+	@Override
+	public boolean addFlight(Flight flight) {
+		// TODO Auto-generated method stub
+		int result = flightMapper.insert(flight);
+		if(result == 1)
+			return true;
+		return false;
+	}
+
+	/**
+	 * 删除航班方法
+	 */
+	@Override
+	public boolean deleteFlight(Flight flight) {
+		// TODO Auto-generated method stub
+		int result = flightMapper.deleteByPrimaryKey(flight.getId());
+		if(result == 1)
+			return true;
+		return false;
+	}
+
+	/**
+	 * 修改航班信息方法
+	 */
+	@Override
+	public boolean updateFlight(Flight flight) {
+		// TODO Auto-generated method stub
+		int result = flightMapper.updateByPrimaryKeySelective(flight);
+		if(result == 1)
+			return true;
+		return false;
+	}
+
+	/**
+	 * 更具条件查询航班方法
+	 */
+	@Override
+	public List<Flight> queryFlight(Flight flight) {
+		// TODO Auto-generated method stub
+		List<Flight> flightList = queryFlight(flight);
+		return flightList;
+	}
+
+	/**
+	 * 获取航班总数
+	 */
+	@Override
+	public int getTotalFlights() {
+		return flightMapper.getTotal();
+	}
+
+	@Override
+	public List<Flight> find(Flight flight) {
+		// TODO Auto-generated method stub
+		flightMapper.find(flight);
+		return null;
+	}
+	
+}

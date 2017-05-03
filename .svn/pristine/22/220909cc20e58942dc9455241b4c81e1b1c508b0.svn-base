@@ -1,0 +1,13 @@
+package com.cqut.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class MainAction {
+	@RequestMapping("toMain")
+	public String toMain(){
+		System.out.println("tomain");
+		return "main";
+	}
+}

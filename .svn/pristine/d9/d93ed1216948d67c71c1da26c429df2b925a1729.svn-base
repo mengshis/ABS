@@ -1,0 +1,5 @@
+package com.cqut.Util;
+
+public class BaseController {
+	public static final int PAGE_LIMIT = 10;
+}

@@ -1,0 +1,85 @@
+﻿* {padding:0px;margin:0px;}
+html,body {	width:100%;	height:100%;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:".";}
+body {height:100%;font-size:12px;font-family:\5b8b\4f53,Arial,sans-serif;overflow:hidden;z-index:1;background-color:#EEF2F6;}
+ul {list-style:none;}
+form {margin:0;padding:0;}
+.top {height:100px;width:100%;background-color:#00A393;overflow:hidden;clear:both;position:relative;}
+.top .top_logo {width:504px;height:63px;float:left;background:url(../images/logo2.png);margin-top:18px;margin-left:20px;}
+.top .top_link {position:absolute;right:10px;top:0px;}
+.top .top_link ul {float:left;height:23px;overflow:hidden;margin-top:38px;}
+.top .top_link ul li {float:left;height:23px;line-height:23px;padding-left:30px;margin-right:20px;}
+.top .top_link ul li.home {background:url(../images/ico_home.png) no-repeat;}
+.top .top_link ul li.logout {background:url(../images/ico_exit.png) no-repeat;}
+.top .top_link ul li.wel {background:url(../images/ayc1.png) no-repeat;color:#fff;font-size:14px;}
+.top .top_link ul li a {color:#fff;text-decoration:none;font-size:14px;}
+
+body.showmenu .left {
+	display:block;
+}
+body.hidemenu .left {
+	display:none;
+}
+body.showmenu .right {
+	left:205px;
+}
+body.hidemenu .right {
+	left:0px;
+}
+.left {
+	position:absolute;
+	top:105px;
+	width:205px;
+	left:0px;
+	bottom:70px;
+	z-index:7;
+}
+.left {
+	*height:100%;
+	*top:0;
+	*bottom:70;
+	*border-top:105px solid #FFF;
+	*border-bottom:0px solid #FFF;
+	*z-index:1;
+}
+.menu {
+	height:100%;
+}
+.menu iframe {
+	height:100%;
+	width:99.99%;
+	z-index:20;
+}
+.showmenu .right {
+left: 215px;
+}
+.right {
+	position:absolute;
+	left:215px;
+	top:105px;
+	bottom:70px;
+	z-index:7;
+	right:0px;
+	
+}
+.right {
+	*height:100%;
+	*top:0;
+	*bottom:70;
+	*border-top:105px solid #FFF;
+	*border-bottom:0px solid #FFF;
+	*z-index:1;
+}
+.main {
+	height:100%;
+}
+.main iframe {
+	height:100%;
+	width:99.99%;
+	z-index:20;
+}
+
+.bottom{height:70px;line-height:70px;background-color:#005959;color:#fff;position:absolute;left:0px;bottom:0px;width:100%;text-align:center;}
+.bottom .email{margin-left:50px;background:url(../images/mail-1.png) 0px center no-repeat;display:inline-block;padding-left:40px;}
+.bottom .tel{margin-left:50px;background:url(../images/tel-1.png) 0px center no-repeat;display:inline-block;padding-left:40px;}

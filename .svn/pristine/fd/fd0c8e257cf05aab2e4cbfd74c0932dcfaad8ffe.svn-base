@@ -1,0 +1,3 @@
+@charset "UTF-8";
+
+.bgd-jc .resulst table tr td .analysis-detail {display: block !important;}

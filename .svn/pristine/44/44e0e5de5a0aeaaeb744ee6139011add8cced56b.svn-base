@@ -1,0 +1,50 @@
+package com.cqut.service;
+
+import java.util.List;
+
+import com.cqut.bean.Flight;
+
+/**
+ * 航班service
+ * @author yanxiaxu
+ *
+ */
+public interface IFlightService {
+
+	/**
+	 * 添加航班方法
+	 * @param flight
+	 * @return
+	 * 返回值为1说明添加成功
+	 */
+	boolean addFlight(Flight flight);
+	
+	/**
+	 * 删除航班方法
+	 * @param flight
+	 * @return
+	 * 返回值为1说明删除成功
+	 */
+	boolean deleteFlight(Flight flight);
+	
+	/**
+	 * 更新航班信息方法
+	 * @param flight
+	 * @return
+	 * 返回值为1说明删除成功
+	 */
+	boolean updateFlight(Flight flight);
+	
+	/**
+	 * 更具条件查询航班方法
+	 */
+	List<Flight> queryFlight(Flight flight);
+
+	/**
+	 * 获取航班总数
+	 */
+	int getTotalFlights();
+
+	List<Flight> find(Flight flight);
+	
+}
